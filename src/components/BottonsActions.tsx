@@ -97,11 +97,11 @@ const BottonsActions: React.FC<ButtonsActionsProps> = ({
       </button>
 
       <button onClick={handleClearAll} className="btn btn-red">
-        איפוס ציור וצ'אט
+       New drawing
       </button>
 
       <button onClick={handleClear} className="btn btn-orange">
-        איפוס ציורט
+       clear
       </button>
 
       <select

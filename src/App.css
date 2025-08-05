@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.top-buttons-row {
+  display: flex;
+  background: #f9f9f9;
+  padding: 8px;
+}
+
+.left-empty-space {
+  width: 35%;
+}
+
+.buttons-center {
+  flex: 1;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bottom-main-area {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.chat-left-area {
+  width: 35%;
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.canvas-right-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding-left: 10vw;
+  padding-right: 5vw;
+}
+
+
+
+@media (max-width: 768px) {
+  .bottom-main-area {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .chat-left-area,
+  .canvas-right-area {
+    width: 100% !important; 
+    height: 50vh; 
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .chat-left-area {
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+@media (max-width: 400px) {
+  .top-buttons-row {
+    padding: 4px;
+  }
+
+  .canvas-right-area {
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
   }
 }

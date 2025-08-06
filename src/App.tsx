@@ -77,7 +77,6 @@ const App: React.FC = () => {
       }
     } catch (err) {
       console.error(err);
-      alert("שגיאה בחיבור לשרת");
     }
   };
 
